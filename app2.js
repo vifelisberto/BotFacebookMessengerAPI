@@ -1,4 +1,4 @@
-  // Teste BOT Facebook Messenger API // V.Felisberto
+  // Teste BOT Facebook Messenger APi // V.Felisberto 
   'use strict'
 
   const express = require('express')
@@ -26,7 +26,6 @@
                   res.send('Error, wrong token')
           }
   })
-
   // Para post data
   app.post('/webhook/', function (req, res) {
           let messaging_events = req.body.entry[0].messaging
