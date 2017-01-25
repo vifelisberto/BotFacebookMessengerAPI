@@ -260,7 +260,6 @@
             }
     })
 }
-  }
 
   // spin spin sugar
   app.listen(80, function() {
