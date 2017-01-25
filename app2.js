@@ -34,7 +34,8 @@
                   let sender = event.sender.id
                   if (event.message && event.message.text) {
                           let text = event.message.text
-                          if (text === 'Oi' || text === 'Ola'){
+                          text.toLowerCase()
+                          if (text === 'Oi' || text === 'oi'|| text === 'Olá'|| text === 'Ola'|| text === 'olá'|| text === 'ola'){
                                   console.log("Mensagem recebida: "+text)
                                   sendGenericMessage(sender)
                                   //sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!")
