@@ -34,10 +34,11 @@
                   let sender = event.sender.id
                   if (event.message && event.message.text) {
                           let text = event.message.text.toLowerCase()
-                          if (text === 'Oi' || text === 'oi'|| text === 'Olá'|| text === 'Ola'|| text === 'olá'|| text === 'ola'){
+                          if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'|| text === 'eae'|| text === 'eai'){
                                   console.log("Mensagem recebida: "+text)
-                                  sendGenericMessage(sender)
-                                  //sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!")
+                                  //sendGenericMessage(sender)
+                                  sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!")
+                                  sendTextMessage(sender, "No que podemos te ajudar? =D")
                                   continue
                           }
                           //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
