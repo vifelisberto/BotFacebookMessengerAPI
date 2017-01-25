@@ -32,8 +32,7 @@
           for (let i = 0; i < messaging_events.length; i++) {
                   let event = req.body.entry[0].messaging[i]
                   let sender = event.sender.id
-                  if (req.body.entry[0]) {
-                    console.log("Chat aberto")
+                  if (event.message && event.message.text) {
                           let text = event.message.text.toLowerCase()
                           if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'|| text === 'eae'|| text === 'eai'){
                                   console.log("Mensagem recebida: "+text)
@@ -41,6 +40,9 @@
                                   sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!")
                                   sendTextMessage(sender, "No que podemos te ajudar? =D")
                                   continue
+                          }
+                          if (text === 'cursos'){
+                            sendGenericMessage(sender)
                           }
                           //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
                   }
@@ -84,26 +86,30 @@
                           "payload": {
                                   "template_type": "generic",
                                   "elements": [{
-                                          "title": "First card",
-                                          "subtitle": "Element #1 of an hscroll",
-                                          "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                                          "title": "BOOTCAMP DE PROGRAMAÇÃO",
+                                          "subtitle": "Aprenda a programar em 8 semanas",
+                                          "image_url": "https://mastertech.tech/wp-content/uploads/2016/11/curso-imersivo-programacao.jpg",
                                           "buttons": [{
                                                   "type": "web_url",
-                                                  "url": "https://www.messenger.com",
-                                                  "title": "web url"
+                                                  "url": "https://mastertech.tech/bootcamp/",
+                                                  "title": "Inscreva-se"
                                           }, {
                                                   "type": "postback",
-                                                  "title": "Postback",
-                                                  "payload": "Payload for first element in a generic bubble",
+                                                  "title": "Quero saber mais",
+                                                  "payload": "Quero saber mais",
                                           }],
                                   }, {
-                                          "title": "Second card",
-                                          "subtitle": "Element #2 of an hscroll",
-                                          "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                                          "title": "EM UM FINAL DE SEMANA",
+                                          "subtitle": "Aprenda a programar em um final de semana",
+                                          "image_url": "https://mastertech.tech/wp-content/uploads/2016/10/IoonicHome.jpg",
                                           "buttons": [{
+                                                  "type": "web_url",
+                                                  "url": "https://mastertech.tech/fds/",
+                                                  "title": "Inscreva-se"
+                                          }, {
                                                   "type": "postback",
-                                                  "title": "Postback",
-                                                  "payload": "Payload for second element in a generic bubble",
+                                                  "title": "Quero saber mais",
+                                                  "payload": "Quero saber mais",
                                           }],
                                   }]
                           }
