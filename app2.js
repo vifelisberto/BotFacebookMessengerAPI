@@ -33,8 +33,7 @@
                   let event = req.body.entry[0].messaging[i]
                   let sender = event.sender.id
                   if (event.message && event.message.text) {
-                          let text = event.message.text
-                          let text.toLowerCase()
+                          let text = event.message.text.toLowerCase()
                           if (text === 'Oi' || text === 'oi'|| text === 'Olá'|| text === 'Ola'|| text === 'olá'|| text === 'ola'){
                                   console.log("Mensagem recebida: "+text)
                                   sendGenericMessage(sender)
