@@ -46,7 +46,7 @@
                             sendGenericMessage(sender)
                           }
                           if (text.indexOf('workshop') != -1){
-                            EnviaList(sender)
+                            sendList(sender)
                           }
                           //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
                   }
@@ -136,7 +136,7 @@
           })
   }
 
-  function EnviaList(sender) {
+  function sendList(sender) {
     let messageData = {
             "attachment": {
                     "type": "template",
@@ -242,7 +242,7 @@
                     }
                 }
           }
-    
+
     request({
             url: 'https://graph.facebook.com/v2.6/me/messages',
             qs: {access_token:token},
