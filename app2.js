@@ -41,7 +41,7 @@
                                   sendTextMessage(sender, "No que podemos te ajudar? =D")
                                   continue
                           }
-                          if (text === 'cursos'){
+                          if (text.indexOf('cursos') != -1){
                             sendGenericMessage(sender)
                           }
                           //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
