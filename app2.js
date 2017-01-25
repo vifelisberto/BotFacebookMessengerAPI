@@ -1,4 +1,4 @@
-  // Teste BOT Facebook Messenger APi // V.Felisberto 
+  // Teste BOT Facebook Messenger APi // V.Felisberto
   'use strict'
 
   const express = require('express')
@@ -34,8 +34,8 @@
                   let sender = event.sender.id
                   if (event.message && event.message.text) {
                           let text = event.message.text
-                          if (text === 'Oi'){
-                                  console.log("welcome to chatbot")
+                          if (text === 'Oi' || text === 'Ola'){
+                                  console.log("Mensagem recebida: "+text)
                                   sendGenericMessage(sender)
                                   //sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!")
                                   continue
