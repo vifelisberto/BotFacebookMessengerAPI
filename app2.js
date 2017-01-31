@@ -20,7 +20,7 @@
 
   // Verificação do Facebook
   app.get('/webhook/', function (req, res) {
-          if (req.query['hub.verify_token'] === 'mastertech') {
+          if (req.query['hub.verify_token'] === '') {
                   res.send(req.query['hub.challenge'])
           } else {
                   res.send('Error, wrong token')
@@ -34,9 +34,9 @@
                   let sender = event.sender.id
                   if (event.message && event.message.text) {
                           let text = event.message.text.toLowerCase()
-                          if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'|| text === 'eae'|| text === 'eai'){
+                          if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'){
                                   //sendGenericMessage(sender)
-                                  sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!")
+                                  sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!");
 
                                   sendTextMessage(sender, "No que podemos te ajudar? =D")
                                   continue
