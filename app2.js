@@ -138,10 +138,6 @@
 
   function sendList(sender) {
     let messageData = {
-      "recipient":{
-        "id":"USER_ID"
-      },
-      "message":{
         "text":"Pick a color:",
         "quick_replies":[
           {
@@ -156,7 +152,6 @@
           }
         ]
       }
-    }
     request({
             url: 'https://graph.facebook.com/v2.6/me/messages',
             qs: {access_token:token},
