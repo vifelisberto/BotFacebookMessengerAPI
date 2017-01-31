@@ -36,17 +36,19 @@
                           let text = event.message.text.toLowerCase()
                           if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'){
                                   //sendGenericMessage(sender)
-                                  sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!");
-
+                                if(sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!")){
                                   sendTextMessage(sender, "No que podemos te ajudar? =D")
+                                }
                                   continue
                           }
                           if (text.indexOf('cursos') != -1){
                             sendTextMessage(sender, "Esses são nossos cursos ;)")
                             sendGenericMessage(sender)
+                            continue
                           }
                           if (text.indexOf('workshop') != -1){
                             sendList(sender)
+                            continue
                           }
                           //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
                   }
