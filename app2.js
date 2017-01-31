@@ -20,7 +20,7 @@
 
   // Verificação do Facebook
   app.get('/webhook/', function (req, res) {
-          if (req.query['hub.verify_token'] === '') {
+          if (req.query['hub.verify_token'] === 'mastertech') {
                   res.send(req.query['hub.challenge'])
           } else {
                   res.send('Error, wrong token')
