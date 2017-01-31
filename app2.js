@@ -36,7 +36,7 @@
                           let text = event.message.text.toLowerCase()
                           if (text === 'oi' || text === 'ola'|| text === 'olá'|| text === 'ooi'|| text === 'oii'){
                                   //sendGenericMessage(sender)
-                                sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!").then(){
+                                sendTextMessage(sender, "Olá seja bem-vindo ao Mastertech!!").then(function()){
                                   sendTextMessage(sender, "No que podemos te ajudar? =D")
                                 }
                                   continue
